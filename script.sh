@@ -1,11 +1,14 @@
 #!/usr/local/bin/bash
 
 LOGFILE="/opt/log/log.log"
-INTERVAL="2"
 
 if [ -z $URL ]; then
 	echo "Error: Please specify testing URL."
     exit -1
+fi
+
+if [ -z $INTERVAL ]; then
+	INTERVAL="2"
 fi
 
 while true
